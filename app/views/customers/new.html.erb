@@ -1,0 +1,13 @@
+<% if flash[:notice] %>
+  <p><%= h flash[:notice] %></p>
+<% end %>
+
+<%= form_for @customer_form, url: customers_path do |f| %>
+  <%= f.text_field :name %>
+  <%= f.label :name %>
+
+  <%= f.text_field :account_number %>
+  <%= f.label :account_number %>
+
+  <%= f.submit 'Add' %>
+<% end %>
